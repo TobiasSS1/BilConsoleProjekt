@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace BilConsoleProjekt
 {
-    class Program
+    class BenzingBil : Bil
     {
-        static void Main(string[] args)
+        public BenzingBil(int pris) : base(pris)
         {
-            Bil NyBil = new Bil(200000);
+        }
+
+        public override int Afgift()
+        {
+            throw new NotImplementedException();
         }
     }
 }
