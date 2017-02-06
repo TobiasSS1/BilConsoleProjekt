@@ -10,19 +10,30 @@ namespace BilConsoleProjekt
     {
 
         public bool PartikelFilter { get; private set; }
-        public DieselBil(int pris, bool pf) : base(pris)
+        public DieselBil(int pris, bool pf) : base(pris, true)
         {
+            this.Mærke = Mærke;
+            this.PrisExAfgift = PrisExAfgift;
+            this.KøbsÅr = KøbsÅr;
+            this.KmPrLiter = KmPrLiter;
             this.PartikelFilter = pf;
         }
 
         public DieselBil(int pris) : this(pris, true)
         {
-            
+            this.Mærke = Mærke;
+            this.PrisExAfgift = PrisExAfgift;
+            this.KøbsÅr = KøbsÅr;
+            this.KmPrLiter = KmPrLiter;
         }
 
-        public override int Afgift()
+        public override int HalvÅrligEjerAfgift()
         {
-            return 1200;
+            if(PartikelFilter != true)
+            {
+                return base.HalvÅrligEjerAfgift() + 500; 
+            }
+            return base.HalvÅrligEjerAfgift();
         }
     }
 }

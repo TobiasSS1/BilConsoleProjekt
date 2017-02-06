@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BilConsoleProjekt
 {
-    class Bil
+    public class Bil
     {
-        public int BilPrisExAfgift {get; set;}
+        private int BilPrisExAfgift {get; set;}
         public int KøbsÅr { get; set; }
         public string Mærke { get; set; }
-        public string RegistreringsNr { get; set; }
+        private string RegistreringsNr { get; set; }
         public int KmPrLiter { get; set; }
 
         public Bil(int BilPrisExAfgift, int KøbsÅr, string Mærke, string RegistreringsNr, int KmPrLiter)
@@ -56,8 +56,18 @@ namespace BilConsoleProjekt
 
         public int TotalPris()
         {
-            return 0;
+            return BilPrisExAfgift;
         }
+
+        public virtual int HalvÅrligEjerAfgift()
+        {
+            return 1000;
+        }
+
+
+
+
+
 
     }
 
