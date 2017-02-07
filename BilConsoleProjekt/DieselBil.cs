@@ -29,11 +29,21 @@ namespace BilConsoleProjekt
 
         public override int HalvÅrligEjerAfgift()
         {
-            if(PartikelFilter != true)
-            {
-                return HalvÅrligEjerAfgift() + 500; 
-            }
-            return HalvÅrligEjerAfgift();
+
+            int afgiftialt = HalvÅrligEjerAfgift();
+            if (KmPrLiter < 15)
+                afgiftialt = afgiftialt + 2000;
+
+            else if (KmPrLiter > 14 && KmPrLiter < 26)
+                afgiftialt = afgiftialt + 1000;
+
+            else if (KmPrLiter > KmPrLiter)
+                afgiftialt = afgiftialt + 350;
+            
+            if (PartikelFilter != true)
+                return afgiftialt + 500;
+           
+            return afgiftialt;
         }
     }
 }
