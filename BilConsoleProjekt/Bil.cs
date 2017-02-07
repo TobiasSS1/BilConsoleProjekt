@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BilConsoleProjekt
 {
-    public class Bil
+    public abstract class Bil
     {
-        private int BilPrisExAfgift {get; set;}
+        public int BilPrisExAfgift {get; set;}
         public int KøbsÅr { get; set; }
         public string Mærke { get; set; }
         private string RegistreringsNr { get; set; }
@@ -59,11 +59,19 @@ namespace BilConsoleProjekt
             return BilPrisExAfgift;
         }
 
-        public virtual int HalvÅrligEjerAfgift()
+        public abstract int HalvÅrligEjerAfgift();
+        
+
+        public override string ToString()
         {
-            return 1000;
+            return $"{Mærke}{KøbsÅr}";
+
+    {
+
+            }
         }
 
+        }
 
 
 
@@ -72,4 +80,4 @@ namespace BilConsoleProjekt
     }
 
     
-}
+

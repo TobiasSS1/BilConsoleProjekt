@@ -10,19 +10,19 @@ namespace BilConsoleProjekt
     {
 
         public bool PartikelFilter { get; private set; }
-        public DieselBil(int pris, bool pf) : base(pris, true)
+        public DieselBil(int BilPrisExAfgift, int KøbsÅr, string Mærke, string RegistreringsNr, int KmPrLiter, bool pf) : base( BilPrisExAfgift, KøbsÅr, Mærke, RegistreringsNr, KmPrLiter)
         {
             this.Mærke = Mærke;
-            this.PrisExAfgift = PrisExAfgift;
+            this.BilPrisExAfgift = BilPrisExAfgift;
             this.KøbsÅr = KøbsÅr;
             this.KmPrLiter = KmPrLiter;
             this.PartikelFilter = pf;
         }
 
-        public DieselBil(int pris) : this(pris, true)
+        public DieselBil(int BilPrisExAfgift, int KøbsÅr, string Mærke, string RegistreringsNr, int KmPrLiter) : this(BilPrisExAfgift, KøbsÅr, Mærke, RegistreringsNr, KmPrLiter, true)
         {
             this.Mærke = Mærke;
-            this.PrisExAfgift = PrisExAfgift;
+            this.BilPrisExAfgift = BilPrisExAfgift;
             this.KøbsÅr = KøbsÅr;
             this.KmPrLiter = KmPrLiter;
         }
@@ -31,9 +31,9 @@ namespace BilConsoleProjekt
         {
             if(PartikelFilter != true)
             {
-                return base.HalvÅrligEjerAfgift() + 500; 
+                return HalvÅrligEjerAfgift() + 500; 
             }
-            return base.HalvÅrligEjerAfgift();
+            return HalvÅrligEjerAfgift();
         }
     }
 }
