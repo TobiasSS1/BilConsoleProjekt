@@ -28,44 +28,30 @@ namespace BilConsoleProjekt
             ElBil ElBil3 = new ElBil(2701, 2018, "Opel", "MC 2123", 7, 13);
             ElBil ElBil4 = new ElBil(3291, 2011, "Citroen", "YV 2139", 7, 1);
 
-            List<BenzingBil> BenzinBilListe = new List<BenzingBil>();
+            List<IBil> BilListe = new List<IBil>();
 
-            BenzinBilListe.Add(BenzinBil);
-            BenzinBilListe.Add(BenzinBil2);
-            BenzinBilListe.Add(BenzinBil3);
-            BenzinBilListe.Add(BenzinBil4);
-            BenzinBilListe.Add(BenzinBil5);
+            BilListe.Add(BenzinBil);
+            BilListe.Add(BenzinBil2);
+            BilListe.Add(BenzinBil3);
+            BilListe.Add(BenzinBil4);
+            BilListe.Add(BenzinBil5);
 
-            List<DieselBil> DiezelBilListe = new List<DieselBil>();
+            BilListe.Add(DieselBil);
+            BilListe.Add(DieselBil2);
+            BilListe.Add(DieselBil3);
+            BilListe.Add(DieselBil4);
+            BilListe.Add(DieselBil5);
 
-            DiezelBilListe.Add(DieselBil);
-            DiezelBilListe.Add(DieselBil2);
-            DiezelBilListe.Add(DieselBil3);
-            DiezelBilListe.Add(DieselBil4);
-            DiezelBilListe.Add(DieselBil5);
-
-            List<ElBil> ElBilListe = new List<ElBil>();
-
-            ElBilListe.Add(ElBil);
-            ElBilListe.Add(ElBil1);
-            ElBilListe.Add(ElBil2);
-            ElBilListe.Add(ElBil3);
-            ElBilListe.Add(ElBil4);
+            BilListe.Add(ElBil);
+            BilListe.Add(ElBil1);
+            BilListe.Add(ElBil2);
+            BilListe.Add(ElBil3);
+            BilListe.Add(ElBil4);
 
 
-            foreach (var K in ElBilListe)
+            foreach (var K in BilListe)
             {
-                Console.WriteLine(K);
-            }
-
-            foreach (var B in BenzinBilListe)
-            {
-                Console.WriteLine(B);
-            }
-            
-            foreach (var L in DiezelBilListe)
-            {
-                Console.WriteLine(L);                
+                Console.WriteLine(K);             
             }
 
             //BIILListe.Add(AltBil); /* test */

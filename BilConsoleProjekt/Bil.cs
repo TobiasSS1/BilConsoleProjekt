@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilConsoleProjekt
 {
-    public abstract class Bil
+    public abstract class Bil : IBil
     {
         public int BilPrisExAfgift {get; set;}
         public int KøbsÅr { get; set; }
