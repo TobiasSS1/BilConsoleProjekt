@@ -12,15 +12,14 @@ namespace BilConsoleProjekt
         public int KøbsÅr { get; set; }
         public string Mærke { get; set; }
         private string RegistreringsNr { get; set; }
-        public int KmPrLiter { get; set; }
 
-        public Bil(int BilPrisExAfgift, int KøbsÅr, string Mærke, string RegistreringsNr, int KmPrLiter)
+        public Bil(int BilPrisExAfgift, int KøbsÅr, string Mærke, string RegistreringsNr)
         {
             this.BilPrisExAfgift = BilPrisExAfgift;
             this.KøbsÅr = KøbsÅr;
             this.Mærke = Mærke;
             this.RegistreringsNr = RegistreringsNr;
-            this.KmPrLiter = KmPrLiter;
+            
         }
 
         public virtual int RegistreringsAfgift()
@@ -54,6 +53,8 @@ namespace BilConsoleProjekt
 
         }
 
+        public abstract int RækkeVidde();
+
         public int TotalPris()
         {
             return BilPrisExAfgift;
@@ -64,7 +65,7 @@ namespace BilConsoleProjekt
 
         public override string ToString()
         {
-            return $"{Mærke}{KøbsÅr}";
+            return $"{Mærke} {KøbsÅr} {RækkeVidde()}";
 
     {
 

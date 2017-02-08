@@ -8,8 +8,13 @@ namespace BilConsoleProjekt
 {
     public sealed class BenzingBil : Bil
     {
-        public BenzingBil(int BilPrisExAfgift, int KøbsÅr, string Mærke, string RegistreringsNr, int KmPrLiter) : base(BilPrisExAfgift, KøbsÅr, Mærke, RegistreringsNr, KmPrLiter)
+        public int Tank { get; private set; }
+        public int KmPrLiter { get; private set; }
+
+        public BenzingBil(int BilPrisExAfgift, int KøbsÅr, string Mærke, string RegistreringsNr, int KmPrLiter, int Tank) : base(BilPrisExAfgift, KøbsÅr, Mærke, RegistreringsNr)
         {
+            this.Tank = Tank;
+            this.KmPrLiter = KmPrLiter;
         }
 
         public override int HalvÅrligEjerAfgift()
@@ -25,6 +30,11 @@ namespace BilConsoleProjekt
                 afgiftialt = afgiftialt + 320;
 
             return afgiftialt;
+        }
+
+        public override int RækkeVidde()
+        {
+            return Tank * KmPrLiter;
         }
     }
 }
