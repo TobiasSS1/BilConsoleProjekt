@@ -10,7 +10,7 @@ namespace BilConsoleProjekt
     {
         static void Main(string[] args)
         {
-            DieselBil DieselBil = new DieselBil(20000, 2016, "Volvo", "AJ 5094", 10, 3);
+            DieselBil DieselBil = new DieselBil("kage", 2016, "Volvo", "AJ 5094", 10, 3);
             DieselBil DieselBil2 = new DieselBil(22000, 2013, "Toyota", "KF 2194", 12, 6);
             DieselBil DieselBil3 = new DieselBil(19000, 2015, "VolksWagen", "DB 5964", 15, 8);
             DieselBil DieselBil4 = new DieselBil(22000, 2013, "Opel", "VC 8894", 9, 8);
@@ -20,7 +20,7 @@ namespace BilConsoleProjekt
             BenzingBil BenzinBil2 = new BenzingBil(21992, 2016, "Toyota", "EJ 2934", 11, 5);
             BenzingBil BenzinBil3 = new BenzingBil(23022, 2017, "VolksWagen", "UI 2621", 9, 4);
             BenzingBil BenzinBil4 = new BenzingBil(22222, 2011, "Opel", "LC 1111", 8, 8);
-            BenzingBil BenzinBil5 = new BenzingBil(98475, 2018, "Citroen", "EK 1243", 13, 2);
+            BenzingBil BenzinBil5 = new BenzingBil(28475, 2018, "Citroen", "EK 1243", 13, 2);
 
             ElBil ElBil = new ElBil(29910, 2017, "Volvo", "JV 8319", 11, 3);
             ElBil ElBil1 = new ElBil(30192, 2016, "Toyota", "KL 1738", 10, 1);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilConsoleProjekt
 {
-    public class ElBil : Bil
+    public class ElBil : Bil, IElBil
     {
         public int BatteriKapacitet { get; private set; }
         public int KmPrKW { get; private set; }
