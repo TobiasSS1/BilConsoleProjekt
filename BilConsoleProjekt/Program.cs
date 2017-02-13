@@ -10,7 +10,7 @@ namespace BilConsoleProjekt
     {
         static void Main(string[] args)
         {
-            DieselBil DieselBil = new DieselBil("kage", 2016, "Volvo", "AJ 5094", 10, 3);
+            DieselBil DieselBil = new DieselBil(2122, 2016, "Volvo", "AJ 5094", 10, 3);
             DieselBil DieselBil2 = new DieselBil(22000, 2013, "Toyota", "KF 2194", 12, 6);
             DieselBil DieselBil3 = new DieselBil(19000, 2015, "VolksWagen", "DB 5964", 15, 8);
             DieselBil DieselBil4 = new DieselBil(22000, 2013, "Opel", "VC 8894", 9, 8);
