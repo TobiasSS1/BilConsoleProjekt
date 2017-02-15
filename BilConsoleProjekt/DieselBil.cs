@@ -30,7 +30,7 @@ namespace BilConsoleProjekt
 
         public override int HalvÅrligEjerAfgift()
         {
-            int afgiftialt = HalvÅrligEjerAfgift();
+            int afgiftialt = 0;
             if (KmPrLiter < 15)
                 afgiftialt = afgiftialt + 2000;
 

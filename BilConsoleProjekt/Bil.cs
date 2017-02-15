@@ -28,7 +28,7 @@ namespace BilConsoleProjekt
             if (KøbsÅr <= 2014)
             {
                 
-                if (Bilpris <= 80500)
+                if (Bilpris > 80500)
                 {
                     int Imentebilpris = Bilpris - 80500;
                     Bilpris = Bilpris - Imentebilpris;
@@ -40,7 +40,7 @@ namespace BilConsoleProjekt
             else if (KøbsÅr >= 2015)
             {
                 
-                if (Bilpris >= 81700)
+                if (Bilpris <= 81700)
                 {
                     int Imentebilpris = Bilpris - 81700;
                     Bilpris = Bilpris - Imentebilpris;
